@@ -1,9 +1,10 @@
 function Do(){
+var str=document.getElementById("list").value;
 var xhr  = new XMLHttpRequest();
 var type = 'POST';
 var url  = 'https://api.backendless.com/36DC4E7A-2B33-40D0-A382-FD197E23A89B/BC24AD0C-019C-42A0-BAAD-229B8D8F7222/data/AJAX';
 var data = {
-  "List" : "Walking"
+  "List" : str
 };
 
 xhr.onreadystatechange = function() {
@@ -19,23 +20,3 @@ xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
 xhr.send(JSON.stringify(data));
 }
 
-/*
-        
-        var options = {}; 
-        options.data = JSON.stringify({
-            "List" : str});
-          
-          options.type    = 'POST';
-          options.url     = 'https://api.backendless.com/36DC4E7A-2B33-40D0-A382-FD197E23A89B/BC24AD0C-019C-42A0-BAAD-229B8D8F7222/data/AJAX';
-          
-          options.success = function(resp, status, xhr) {
-              console.log(resp, status, xhr);
-          };
-          
-          options.error = function(xhr) {
-              console.log(JSON.parse(xhr.responseText), xhr);
-          };
-          $.ajax(options.url,options);
-        });
-    });
-    */
