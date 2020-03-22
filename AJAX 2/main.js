@@ -1,5 +1,5 @@
         $(document).ready(function(){
-            $("#list").click(function(){
+            $("#addlist").click(function(){
 
                 var txt = JSON.stringify( { "List": ($('#list').val()) } ); 
                 $.ajax({ 
@@ -9,8 +9,8 @@
                     data: txt,
                     success: function( data){
                         
-                        $('#ul').show(JSON.stringify( data ) );
-                        alert(data);
+                        $('#ul').text(JSON.stringify( data ) );
+                        
                     },
                     error: function(errorThrown ){
                         console.log( errorThrown );
