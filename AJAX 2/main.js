@@ -9,7 +9,7 @@
                     data: txt,
                     success: function( data){
                         
-                        $('#ul').html(JSON.stringify( data ) );
+                        $('#ul').show(JSON.stringify( data ) );
                         alert(data);
                     },
                     error: function(errorThrown ){
