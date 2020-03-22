@@ -1,3 +1,4 @@
+
         $(document).ready(function(){
             $("#addlist").click(function(){
 
@@ -9,7 +10,8 @@
                     data: txt,
                     success: function( data){
                         
-                        $('#ul').text(JSON.stringify( data ) );
+                        var txt2 = $("<ul></ul>").text( $('#list').val());
+                        $("body").append(txt2);
                         
                     },
                     error: function(errorThrown ){
